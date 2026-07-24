@@ -22,6 +22,39 @@ Healthcare organizations collect data from multiple systems such as patient regi
 ### Business Problem
 A hospital wants to combine patient, diagnosis, laboratory, and medication data into a centralized data warehouse to answer clinical and operational questions.
 
+### Solution
+
+To address this challenge, this project implements a modern **Healthcare Patient Analytics ELT Pipeline** using SQL Server, SSIS, and Power BI.
+
+The solution extracts data from multiple healthcare CSV files, loads the raw data into SQL Server staging tables, and performs all data cleansing, validation, and transformation within the database using T-SQL stored procedures. The transformed data is then modeled into a **Galaxy Schema (Fact Constellation Schema)** consisting of shared dimension tables and multiple fact tables for patient vitals, diagnoses, laboratory results, and medications.
+
+The resulting data warehouse provides a single source of truth for healthcare reporting, enabling fast and reliable analytics through SQL queries and interactive Power BI dashboards.
+
+#### Data Model
+
+The project follows a **Galaxy Schema (Fact Constellation Schema)** design.
+
+The data warehouse contains multiple fact tables that share common dimension tables, allowing different healthcare business processes to be analyzed while maintaining a consistent and scalable data model.
+
+### Fact Tables
+
+Fact tables store measurable clinical and operational data and link to the dimension tables for reporting and analysis.
+
+- **fact_vitals** – Stores patient vital sign measurements such as BMI, blood pressure, heart rate, and temperature.
+- **fact_diagnosis** – Stores patient diagnosis events and links patients to diagnosis information.
+- **fact_lab_results** – Stores laboratory test results, reference ranges, and abnormal result indicators.
+- **fact_medication** – Stores prescribed medication details, dosage, duration, and adherence information.
+
+### Dimension Tables
+
+Dimension tables store descriptive information used to filter, group, and analyze the fact data.
+
+- **dim_patient** – Patient demographic information.
+- **dim_date** – Calendar and time attributes.
+- **dim_diagnosis** – Diagnosis codes, names, and categories.
+- **dim_medication** – Medication names, drug classes, and manufacturers.
+- **dim_lab_test** – Laboratory test names and categories.
+
 ### Hospital Data Pipeline – Medallion Architecture
 
 This Healthcare Patient Analytics Data Warehouse follows the Medallion Architecture, which organizes data into three logical layers: Bronze, Silver, and Gold. This layered approach improves data quality, simplifies data management, and provides reliable datasets for reporting and analytics.
@@ -91,9 +124,16 @@ Example outputs include:
 **-Percentage of Abnormal Lab Results
 These datasets can be consumed directly by reporting tools such as Power BI for interactive dashboards and business insights.
 
-#### Technology Stack
+### Tools & Technologies:
 
-- SQL Server
+- **SQL Server** – Used for database creation and query execution  
+- **SSIS (SQL Server Integration Services)** – Used for ETL process (Extract, Transform, Load)  
+- **draw.io** – Used for designing the star schema diagram  
+- **VS Code** – Used for code editing and project management  
+- **Git Bash** -Used to run Git commands.
+- **GitHub** -Used to host and manage the project repository.
+
+
 - SQL Server Management Studio (SSMS)
 - SQL Server Integration Services (SSIS)
 - T-SQL
