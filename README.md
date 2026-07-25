@@ -38,12 +38,12 @@ The data warehouse contains multiple fact tables that share common dimension tab
 
 Dimension tables store descriptive information used to filter, group, and analyze the fact data.
 
-- **dim_patient** – Patient demographic information.
-- **dim_date** – Calendar and time attributes.
-- **dim_diagnosis** – Diagnosis codes, names, and categories.
-- **dim_medication** – Medication names, drug classes, and manufacturers.
-- **dim_lab_test** – Laboratory test names and categories.
-- **dim_visit** – Stores visit-related information such as visit type (Inpatient, Outpatient, Emergency) and provider specialty (Cardiology, General Practice, Neurology, etc.).
+- ** dim_patient** – Patient demographic information.
+- ** dim_date** – Calendar and time attributes.
+- ** dim_diagnosis** – Diagnosis codes, names, and categories.
+- ** dim_medication** – Medication names, drug classes, and manufacturers.
+- ** dim_lab_test** – Laboratory test names and categories.
+- ** dim_visit** – Stores visit-related information such as visit type (Inpatient, Outpatient, Emergency) and provider specialty (Cardiology, General Practice, Neurology, etc.).
 
 
 ### Fact Tables
@@ -130,4 +130,24 @@ These datasets can be consumed directly by reporting tools such as Power BI for 
 - **VS Code** – Used for code editing and project management  
 - **Git Bash** -Used to run Git commands.
 - **GitHub** -Used to host and manage the project repository.
+
+  ### Skills Demonstrated
+
+This project demonstrates practical experience with:
+
+- SQL Server
+- T-SQL (SQL Programming)
+- SQL Server Integration Services (SSIS)
+- ETL/ELT Pipeline Development
+- Medallion Architecture (Bronze, Silver, Gold)
+- Data Cleaning, Validation, and Transformation
+- Galaxy Schema Data Modeling
+- Fact and Dimension Table Design
+- Data Warehousing
+- Stored Procedures
+- Incremental inserts
+- Error Handling and Rejected Record Management
+- Healthcare Data Analytics
+- Power BI Dashboard Development
+- Git & GitHub Version Control
 
