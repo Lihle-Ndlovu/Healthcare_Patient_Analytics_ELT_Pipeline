@@ -64,62 +64,57 @@ The Bronze layer stores the raw data exactly as it is received from the source s
 
 ###### The project loads the following CSV files into the Bronze layer:
 
-- **Patients.csv
-- **Diagnoses.csv
-- **Medication.csv
-- **Lab.csv
+- **Patients.csv**
+- **Diagnoses.csv**
+- **Medication.csv**
+- **Lab.csv**
   
 ###### Staging Tables
-- **stg_dim_patient
-- **stg_dim_diagnosis
-- **stg_dim_medication
-- **stg_dim_lab_results
-- **stg_dim_visit
+- **stg_dim_patient**
+- **stg_dim_diagnosis**
+- **stg_dim_medication**
+- **stg_dim_lab_results**
+- **stg_dim_visit**
    
 #### Silver Layer (Cleaned and Integrated Data)
 
 The Silver layer transforms the raw data into clean, validated, and consistent datasets. During this stage, the data is prepared for analytical use by applying several data quality checks, including:
 
-- **Removing duplicate records
-- **Handling missing or invalid values
-- **Standardizing date formats
-- **Validating Patient IDs
-- **Cleaning inconsistent text values
+- Removing duplicate records
+- Handling missing or invalid values
+- tandardizing date formats
+- alidating Patient IDs
+- Cleaning inconsistent text values
  
 ##### Data Integration
 Integrating patient information across all datasets using PatientID
-- **clean_dim_patient
-- **clean_dim_diagnosis
-- **clean_dim_medication
-- **clean_dim_lab_results
-- **clean_dim_visit
+- clean_dim_patient
+- clean_dim_diagnosis
+- clean_dim_medication
+- clean_dim_lab_results
+- clean_dim_visit
 
 The Silver layer provides trusted, high-quality data for downstream processing.
 
 #### Gold Layer (Business-Ready Data)
 The Gold layer contains business-ready data used for reporting, dashboards, and analytics.
 Example outputs include:
-- **dim_patienty
-- **dim_diagnosis
-- **dim_medication
-- **dim_lab_results
-- **dim_visit
-- 
-###### Fact Table
-- **fact_vitals
-- **fact_diagnosis
-- **fact_lab_results
-- **fact_medication
+- dim_patienty
+- dim_diagnosis
+- dim_medication
+- dim_lab_results
+- dim_visit
+- Also all fact tables
 
 ###### Key Performance Indicators (KPIs)
-- **Total Patients
-- **Total Diagnoses
-- **Total Medications Prescribed
-- **Total Laboratory Tests
-- **Average BMI
-- **Average Heart Rate
-- **Average Age
-- **Percentage of Abnormal Lab Results
+- Total Patients
+- Total Diagnoses
+- Total Medications Prescribed
+- Total Laboratory Tests
+- Average BMI
+- Average Heart Rate
+- Average Age
+- Percentage of Abnormal Lab Results
 These datasets can be consumed directly by reporting tools such as Power BI for interactive dashboards and business insights.
 
 ### Tools & Technologies:
