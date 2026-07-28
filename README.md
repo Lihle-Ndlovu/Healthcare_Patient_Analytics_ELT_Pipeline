@@ -106,16 +106,17 @@ Example outputs include:
 - dim_visit
 - Also all fact tables
 
-###### Key Performance Indicators (KPIs)
-- Total Patients
-- Total Diagnoses
-- Total Medications Prescribed
-- Total Laboratory Tests
-- Average BMI
-- Average Heart Rate
-- Average Age
-- Percentage of Abnormal Lab Results
-These datasets can be consumed directly by reporting tools such as Power BI for interactive dashboards and business insights.
+###### SSIS Package Workflow
+
+The ETL process is developed using SQL Server Integration Services (SSIS).
+
+Patient_Load.dtsx
+        ↓
+Diagnosis_Load.dtsx
+        ↓
+Medication_Load.dtsx
+        ↓
+Lab_Load.dtsx
 
 ### Tools & Technologies:
 
@@ -140,7 +141,7 @@ This project demonstrates practical experience with:
 - Fact and Dimension Table Design
 - Data Warehousing
 - Stored Procedures
-- Incremental inserts
+- Incremental Loading
 - Error Handling and Rejected Record Management
 - Healthcare Data Analytics
 - Power BI Dashboard Development
