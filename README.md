@@ -106,17 +106,31 @@ Example outputs include:
 - dim_visit
 - Also all fact tables
 
+  ## Data Quality Management
+Data quality checks were implemented throughout the ETL pipeline to ensure accurate, complete, and reliable healthcare data.
+
+The process includes:
+
+- Validating mandatory fields such as Patient ID, diagnosis details, medication names, and laboratory test names.
+- Identifying and removing duplicate records before loading data into the warehouse.
+- Handling missing values and standardizing NULL values across datasets.
+- Cleaning text fields by removing unnecessary spaces and ensuring consistent formats.
+- Validating data accuracy through business rules, including age validation, BMI checks, medication dosage validation, and laboratory reference range checks.
+- Redirecting invalid records into rejected record tables with error details for investigation and correction.
+
+These data quality processes ensure that only trusted and consistent data is loaded into the healthcare data warehouse, improving the accuracy of reporting and analytics.
+
 ###### SSIS Package Workflow
 
 The ETL process is developed using SQL Server Integration Services (SSIS).
 
-Patient_Load.dtsx
+- Patient_Load.dtsx
         ↓
-Diagnosis_Load.dtsx
+- Diagnosis_Load.dtsx
         ↓
-Medication_Load.dtsx
+- Medication_Load.dtsx
         ↓
-Lab_Load.dtsx
+- Lab_Load.dtsx
 
 ### Tools & Technologies:
 
